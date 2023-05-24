@@ -50,4 +50,14 @@ export class Professione extends Lavoratore{
         Tasse irpef: ${this.getTasseIrpef()}\n
         Reddito annuo netto: ${this.getRedditoAnnuoNetto()}`;
     }
+
+    getHtmlElement():string{
+        return `<div class="el">
+        <h2 class="content">Professione: ${this.getClasse}</h2>
+        <h3 class="content">Utile tasse: ${this.getUtileTasse()}</h3>
+        <h3 class="content">Tasse inps: ${this.getTasseInps()}</h3>
+        <h3 class="content">Tasse irpef: ${this.getTasseIrpef()}</h3>
+        <h2 class="content">Reddito annuo netto: ${this.getRedditoAnnuoNetto()}</h2>
+        </div>`;
+    }
 }

@@ -9,3 +9,11 @@ console.log('-------------------');
 console.log(artigiano.stampa());
 console.log('-------------------');
 console.log(commercialista.stampa());
+
+let container = document.getElementById('container') as HTMLElement | null;
+if(container){
+    container.innerHTML = professionista.getHtmlElement() +
+    artigiano.getHtmlElement() +
+    commercialista.getHtmlElement();
+}
+
